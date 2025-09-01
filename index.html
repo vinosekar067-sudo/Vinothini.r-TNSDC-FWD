@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Student Timeline Portfolio</title>
+
+  <style>
+
+    body {
+
+      font-family: "Poppins", sans-serif;
+
+      background: #f4f4f9;
+
+      margin: 0;
+
+      padding: 0;
+
+      color: #333;
+
+    }
+
+    header {
+
+      text-align: center;
+
+      padding: 50px 20px;
+
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+
+      color: white;
+
+    }
+
+    header h1 {
+
+      font-size: 2.5rem;
+
+      margin-bottom: 10px;
+
+    }
+
+    header p {
+
+      font-size: 1.2rem;
+
+      opacity: 0.9;
+
+    }
+
+    /* Timeline */
+
+    .timeline {
+
+      position: relative;
+
+      max-width: 900px;
+
+      margin: 50px auto;
+
+    }
+
+    .timeline::after {
+
+      content: '';
+
+      position: absolute;
+
+      width: 6px;
+
+      background-color: #2575fc;
+
+      top: 0;
+
+      bottom: 0;
+
+      left: 50%;
+
+      margin-left: -3px;
+
+    }
+
+    .container {
+
+      padding: 20px 40px;
+
+      position: relative;
+
+      width: 50%;
+
+    }
+
+    .left {
+
+      left: 0;
+
+    }
+
+    .right {
+
+      left: 50%;
+
+    }
+
+    .content {
+
+      padding: 20px;
+
+      background: white;
+
+      position: relative;
+
+      border-radius: 10px;
+
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    }
+
+    .container::after {
+
+      content: '';
+
+      position: absolute;
+
+      width: 25px;
+
+      height: 25px;
+
+      right: -13px;
+
+      background-color: white;
+
+      border: 4px solid #2575fc;
+
+      top: 15px;
+
+      border-radius: 50%;
+
+      z-index: 1;
+
+    }
+
+    .right::after {
+
+      left: -13px;
+
+    }
+
+    h2 {
+
+      margin-top: 0;
+
+      color: #2575fc;
+
+    }
+
+    /* Animation */
+
+    .container {
+
+      opacity: 0;
+
+      transform: translateY(50px);
+
+      transition: all 0.8s ease;
+
+    }
+
+    .container.show {
+
+      opacity: 1;
+
+      transform: translateY(0);
+
+    }
+
+    footer {
+
+      text-align: center;
+
+      padding: 20px;
+
+      background: #222;
+
+      color: white;
+
+      margin-top: 50px;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>My Portfolio Journey</h1>
+
+    <p>A creative timeline showcasing my skills & projects 🚀</p>
+
+  </header>
+
+  <div class="timeline">
+
+    <div class="container left">
+
+      <div class="content">
+
+        <h2>About Me</h2>
+
+        <p>Hello! I'm vinothini, a passionate student exploring coding and web development.</p>
+
+      </div>
+
+    </div>
+
+    <div class="container right">
+
+      <div class="content">
+
+        <h2>Skills</h2>
+
+        <p>💻 HTML, CSS, JavaScript<br>⚡ Python, Java<br>🎨 UI/UX Design</p>
+
+      </div>
+
+    </div>
+
+    <div class="container left">
+
+      <div class="content">
+
+        <h2>Projects</h2>
+
+        <p>📂 Portfolio Website<br>📂 Student Management System<br>📂 AI Chatbot</p>
+
+      </div>
+
+    </div>
+
+    <div class="container right">
+
+      <div class="content">
+
+        <h2>Contact</h2>
+
+        <p>📧 Email: yourmail@example.com<br>🔗 LinkedIn: linkedin.com/in/yourprofile</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer>
+
+    <p>© 2025 Student Portfolio | Designed by Me</p>
+
+  </footer>
+
+  <script>
+
+    // Reveal timeline items on scroll
+
+    const items = document.querySelectorAll(".container");
+
+    const revealOnScroll = () => {
+
+      const triggerBottom = window.innerHeight * 0.8;
+
+      items.forEach(item => {
+
+        const boxTop = item.getBoundingClientRect().top;
+
+        if(boxTop < triggerBottom) {
+
+          item.classList.add("show");
+
+        }
+
+      });
+
+    };
+
+    window.addEventListener("scroll", revealOnScroll);
+
+    window.addEventListener("load", revealOnScroll);
+
+  </script>
+
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
